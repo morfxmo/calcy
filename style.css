@@ -1,0 +1,27 @@
+html , body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+.all {
+    background-color: indianred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.calc-frame {
+    background-color: beige;
+    width: 30%;
+    height: 70%;
+    border-radius: 10%;
+    border: 5px solid brown;
+
+    display: flex;
+    justify-content: center;
+}
+
