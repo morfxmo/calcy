@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <title>Clacy</title>
 </head>
 
 <body>
     <div class="all">
+        <h1>Calcy</h1>
+        <p>Don't enter more than 15 char in one num</p>
         <div class="calc-frame">
             <div class="calc-display">
                 <div class="holder"></div>
@@ -29,14 +32,14 @@
                 <button type="button" class="num zero" id="0">0</button>
             </div>
 
-            <div class="calc-actions">
-                <button type="button" class="action clr">C</button>
-                <button type="button" class="action add">+</button>
-                <button type="button" class="action sub">-</button>
-                <button type="button" class="action mul">*</button>
-                <button type="button" class="action divide">/</button>
-                <button type="button" class="action float">.</button>
-                <button type="button" class="action equal">=</button>
+            <div class="calc-actions" id="acts">
+                <button type="button" class="action" id="clr">C</button>
+                <button type="button" class="action" id="add">+</button>
+                <button type="button" class="action" id="sub">-</button>
+                <button type="button" class="action" id="mul">*</button>
+                <button type="button" class="action" id="divide">/</button>
+                <button type="button" class="action" id="float">.</button>
+                <button type="button" class="action" id="equal">=</button>
             </div>
         </div>
     </div>

@@ -18,16 +18,27 @@ button {
 .all {
     background-color: indianred;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
 }
 
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    margin: 0px;
+}
+
+p {
+    font-weight: bolder;
+}
+
 .calc-frame {
     background-color: beige;
     width: 400px;
-    height: 400px;
+    min-height: 400px;
     flex: 0;
     border-radius: 25px;
     border: 5px solid brown;
