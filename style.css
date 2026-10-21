@@ -42,13 +42,19 @@ button {
     width: 370px;
     height: 50px;
     margin: 15px;
+    padding: 10px;
+    box-sizing: border-box;
     border-radius: 10px;
 
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 
-    font-size: 24px;
+    font-size: 32px;
+}
+
+.holder {
+    font-size: 15px;
 }
 
 .calc-actions {
@@ -74,4 +80,5 @@ button {
 
 .action {
     width: 45px;
+    background-color: lightpink;
 }
