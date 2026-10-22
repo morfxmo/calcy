@@ -10,6 +10,36 @@ const evalBtn = document.querySelector("#equal");
 let firstOperand , secondOperand , actionEvent;
 let floated = false , actioned = false;
 
+window.addEventListener("keydown" , (event) => {
+    if (event.key === "Backspace") {
+        if (calcCurrnetDisplay.innerText.length > 0) {
+            let curr = calcCurrnetDisplay.innerText.toString();
+            curr = curr.slice(0 , curr.length - 1);
+            calcCurrnetDisplay.innerText = curr;
+        }
+    }
+
+    else {
+        let curr;
+        if (event.key === "+") curr = document.querySelector("#add");
+        else if (event.key === "-") curr = document.querySelector("#sub");
+        else if (event.key === "*") curr = document.querySelector("#mul");
+        else if (event.key === "/") curr = document.querySelector("#divide");
+        else if (event.key === "Enter") curr = document.querySelector("#equal");
+        else if (event.key === ".") curr = document.querySelector("#float");
+        else {
+            let num = +event.key;
+            if (!Number.isNaN(num)) {
+                calcCurrnetDisplay.innerText += num;
+                if (calcCurrnetDisplay.innerText.length > 11) forceClr();
+            }
+        }
+
+        if (curr !== undefined) curr.click();
+    }
+})
+
+
 clearBtn.addEventListener("click" , (event) => {
     firstOperand = secondOperand = actionEvent = undefined;
     floated = actioned = false;
