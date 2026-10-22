@@ -28,12 +28,12 @@ floater.addEventListener("click" , (event) => {
 
     calcCurrnetDisplay.innerText += '.';
     floated = true;
-    if (calcCurrnetDisplay.innerText.length > 15) forceClr();
+    if (calcCurrnetDisplay.innerText.length > 11) forceClr();
 })
 
 calcNums.addEventListener("click" , (event) => {
     calcCurrnetDisplay.innerText += event.target.id;
-    if (calcCurrnetDisplay.innerText.length > 15) forceClr();
+    if (calcCurrnetDisplay.innerText.length > 11) forceClr();
 })
 
 actions.addEventListener("click" , (event) => {
