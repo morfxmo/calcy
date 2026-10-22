@@ -81,7 +81,15 @@ calcNums.addEventListener("click" , (event) => {
 })
 
 actions.addEventListener("click" , (event) => {
-    if (event.target.id === "acts" || calcCurrnetDisplay.innerText === "") return;
+    console.log(event.target.id);
+    if (calcCurrnetDisplay.innerText === "" && event.target.id === "sub") {
+        calcCurrnetDisplay.innerText = "-";
+        return;
+    }
+
+    if (event.target.id === "acts" || (calcCurrnetDisplay.innerText == "" && event.target.id !== "sub") || calcCurrnetDisplay.innerText == "-") 
+        return;
+
     if (!actioned) {
         actionEvent = event;
         event.target.style["background-color"] = "lightgreen"
