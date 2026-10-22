@@ -75,9 +75,9 @@ function operate (op) {
         }
 
         ret = +firstOperand / +secondOperand;
-        ret = Number(Math.round(ret + "e3") + "e-3");
     }
 
+    ret = Number(Math.round(ret + "e3") + "e-3");
     return ret;
 } 
 
