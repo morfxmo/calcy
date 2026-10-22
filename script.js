@@ -28,9 +28,12 @@ evalBtn.addEventListener("click" , (event) => {
     if (calcCurrnetDisplay.innerText === "") return;
     secondOperand = calcCurrnetDisplay.innerText;
     let res = operate(actionEvent.target.id);
+
     clearBtn.click();
-    calcCurrnetDisplay.innerText = firstOperand = res;
     event.stopPropagation();
+
+    if (res === undefined) return;
+    calcCurrnetDisplay.innerText = firstOperand = res;
 })
 
 floater.addEventListener("click" , (event) => {
@@ -48,10 +51,10 @@ calcNums.addEventListener("click" , (event) => {
 })
 
 actions.addEventListener("click" , (event) => {
-    if (event.target.id === "acts") return;
+    if (event.target.id === "acts" || calcCurrnetDisplay.innerText === "") return;
     if (!actioned) {
         actionEvent = event;
-        event.target.style["background-color"] = "red"
+        event.target.style["background-color"] = "lightgreen"
         calcHolderDisplay.innerText = firstOperand = calcCurrnetDisplay.innerText;
         calcCurrnetDisplay.innerText = "";
         actioned = true;
@@ -68,8 +71,11 @@ function operate (op) {
         if (+secondOperand === 0) {
             alert("What are you doing?");
             clearBtn.click();
+            return;
         }
+
         ret = +firstOperand / +secondOperand;
+        ret = Number(Math.round(ret + "e3") + "e-3");
     }
 
     return ret;
