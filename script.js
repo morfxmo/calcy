@@ -35,7 +35,8 @@ window.addEventListener("keydown" , (event) => {
             }
         }
 
-        if (curr !== undefined) curr.click();
+        if (curr !== undefined) 
+            curr.click();
     }
 })
 
@@ -55,7 +56,7 @@ clearBtn.addEventListener("click" , (event) => {
 })
 
 evalBtn.addEventListener("click" , (event) => {
-    if (calcCurrnetDisplay.innerText === "") return;
+    if (calcHolderDisplay.innerText === "" || calcCurrnetDisplay.innerText === "") return;
     secondOperand = calcCurrnetDisplay.innerText;
     let res = operate(actionEvent.target.id);
 
@@ -81,7 +82,11 @@ calcNums.addEventListener("click" , (event) => {
 })
 
 actions.addEventListener("click" , (event) => {
-    console.log(event.target.id);
+    if (event.target.id === "equal") {
+        evalBtn.click();
+        return;
+    }
+
     if (calcCurrnetDisplay.innerText === "" && event.target.id === "sub") {
         calcCurrnetDisplay.innerText = "-";
         return;
