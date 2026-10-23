@@ -1,6 +1,6 @@
 # Calcy
 Calcy is a simple browser-based calculator built with HTML, CSS, and JavaScript.
-![Calcy calculator preview](./Calcy.png)
+<img src="./Calcy.png" alt="Calcy calculator preview" style="width: auto; height: 400px;">
 
 ## Features
 
