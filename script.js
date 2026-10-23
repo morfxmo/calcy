@@ -61,6 +61,8 @@ evalBtn.addEventListener("click" , (event) => {
     let res = operate(actionEvent.target.id);
 
     clearBtn.click();
+    if (Math.floor(res) + 1 !== res + 1)
+        floated = true;
     event.stopPropagation();
 
     if (res === undefined) return;
