@@ -123,6 +123,10 @@ function operate (op) {
     }
 
     ret = Number(Math.round(ret + "e3") + "e-3");
+    if (Number.isNaN(ret)) {
+        alert("This is too much!");
+        return undefined;
+    }
     return ret;
 } 
 
